@@ -1,0 +1,4 @@
+node_modules
+.env
+public/assets/client.js*
+public/assets/styles.css

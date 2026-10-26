@@ -1,0 +1,14 @@
+node_modules
+.DS_Store
+# create-klein packaging
+create-klein/dist
+create-klein/template
+create-klein/LICENSE
+*.tgz
+# never committed, even inside template/
+.env
+.dev.vars
+.wrangler
+.wrangler-build
+template/base/public/assets/client.js*
+template/base/public/assets/styles.css

@@ -1,0 +1,12 @@
+{
+  "name": "klein-framework",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "new": "bun create-klein/index.ts",
+    "check": "bun scripts/check-variants.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4"
+  }
+}

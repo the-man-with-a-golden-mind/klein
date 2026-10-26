@@ -1,0 +1,37 @@
+{
+  "name": "create-klein",
+  "version": "0.1.0",
+  "description": "Create a small, fast Preact SSR site on Bun or Cloudflare Workers, with SQLite, Postgres or D1.",
+  "keywords": [
+    "preact",
+    "ssr",
+    "hydration",
+    "bun",
+    "cloudflare-workers",
+    "sqlite",
+    "postgres",
+    "d1",
+    "starter",
+    "create"
+  ],
+  "author": "Michał Majchrzak",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "create-klein": "dist/index.js"
+  },
+  "scripts": {
+    "build": "bun build index.ts --target node --outfile dist/index.js",
+    "prepack": "bun run build && rm -rf template && cp -R ../template template && cp ../LICENSE LICENSE && find template -name node_modules -prune -exec rm -rf {} + && mv template/base/.gitignore template/base/gitignore",
+    "postpack": "rm -rf template LICENSE"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "template",
+    "LICENSE",
+    "README.md"
+  ]
+}

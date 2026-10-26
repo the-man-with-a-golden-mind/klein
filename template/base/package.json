@@ -1,0 +1,25 @@
+{
+  "name": "klein",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i src/styles/app.css -o public/assets/styles.css --minify",
+    "build:client": "bun build src/browser.tsx --outdir public/assets --entry-naming client.js --target browser --minify",
+    "build:assets": "bun run build:css && bun run build:client",
+    "dev:css": "tailwindcss -i src/styles/app.css -o public/assets/styles.css --watch",
+    "dev:client": "bun build src/browser.tsx --outdir public/assets --entry-naming client.js --target browser --watch --sourcemap",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "preact": "11.0.2",
+    "preact-render-to-string": "6.8.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.3",
+    "@types/bun": "1.4.4",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2"
+  }
+}
